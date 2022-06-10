@@ -1,0 +1,12 @@
+name: quark
+version: 0.1.0
+
+dependencies:
+  sqlite3:
+    github: crystal-lang/crystal-sqlite3
+
+targets:
+  quark:
+    main: src/main.cr
+
+license: MIT
