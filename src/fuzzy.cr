@@ -14,8 +14,8 @@ module Quark
           )
 
         # assemble regex
-        input = Regex.escape(input)
-        regex = Regex.new(input.split("").join(".*"))
+        escaped = Regex.escape(input)
+        regex = Regex.new(escaped.split("").join(".*"))
 
         # add to locations
         locations.push(location) if File.basename(location.path).match(regex)
