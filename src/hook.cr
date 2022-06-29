@@ -23,6 +23,8 @@ module Quark
 
     # run hook
     def self.run_hook
+      return if Dir.current == Path.home
+
       db = DB.connect("sqlite3://#{File.expand_path("~/.quark.db", home: true)}")
       ensure_table(db)
 
