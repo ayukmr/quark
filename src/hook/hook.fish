@@ -1,6 +1,6 @@
 # run quark-hook on pwd change
 function _quark_hook --on-variable PWD
-    quark hook
+    quark add
 end
 
 # add q command

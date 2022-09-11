@@ -2,7 +2,7 @@ autoload -Uz add-zsh-hook
 
 # run quark-hook on chpwd
 function _quark_hook {
-    quark hook
+    quark add
 }
 add-zsh-hook chpwd _quark_hook
 

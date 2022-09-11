@@ -1,6 +1,6 @@
 # run quark-hook on pwd change
 function _quark_hook {
-    [[ "$PREVPWD" != "$PWD" ]] && quark hook
+    [[ "$PREVPWD" != "$PWD" ]] && quark add
     export PREVPWD="$PWD"
 }
 

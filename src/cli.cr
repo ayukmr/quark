@@ -21,7 +21,7 @@ module Quark
       #{"Commands".magenta.bold}:
         #{"run".cyan}  #{"<TEXT>".yellow}   fuzz locations for text
         #{"hook".cyan} #{"<SHELL>".yellow}  get hook for shell
-        #{"hook".cyan}          hook to add location
+        #{"add".cyan}           add location to database
         #{"list".cyan}          list all locations
       HELP
 

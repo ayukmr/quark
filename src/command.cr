@@ -11,6 +11,9 @@ module Quark
       when "hook"
         run_hook(args)
 
+      when "add"
+        add_location
+
       when "list"
         list_locations
 

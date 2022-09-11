@@ -1,28 +1,7 @@
 module Quark
-  # quark hook
-  class Hook
-    # run quark hook
-    def self.run(item)
-      # check if hook exists
-      has_hook =
-        Dir[File.expand_path(File.join("hook", "*"), __DIR__)]
-          .map { |file| File.basename(file) }
-          .includes?("hook.#{item}")
-
-      if item.nil?
-        run_hook
-      elsif has_hook
-        # get hook
-        puts File.read(File.expand_path(
-          File.join("hook", "hook.#{item}"), __DIR__
-        ))
-      else
-        error("hook for `#{item}` does not exist", 1)
-      end
-    end
-
-    # run hook
-    def self.run_hook
+  module Command
+    # add location
+    def self.add_location
       return if Dir.current == Path.home
 
       db = DB.connect("sqlite3://#{File.expand_path("~/.quark.db", home: true)}")
