@@ -31,15 +31,15 @@ def ensure_table(db)
   set = db.query <<-SQL
     SELECT name
     FROM sqlite_master
-    WHERE type="table" AND name="locations";
+    WHERE type='table' AND name='locations';
   SQL
 
   if !set.move_next
     db.exec <<-SQL
       CREATE TABLE locations (
-          path STRING,
-          times INT DEFAULT 1,
-          last DATETIME DEFAULT CURRENT_TIMESTAMP
+        path STRING,
+        times INT DEFAULT 1,
+        last DATETIME DEFAULT CURRENT_TIMESTAMP
       );
     SQL
   end
