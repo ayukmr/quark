@@ -11,6 +11,14 @@ module Quark
           text, db.query("SELECT * FROM locations")
         ).max?
 
+        # check if location is valid
+        if location && !Dir.exists?(location.path)
+          db.exec("DELETE FROM locations WHERE path = ?", location.path)
+          puts Dir.current
+
+          return
+        end
+
         if location
           # return location's path
           puts location.path
