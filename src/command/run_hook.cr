@@ -16,7 +16,7 @@ module Quark
           File.join("..", "hook", "hook.#{shell}"), __DIR__
         ))
       else
-        error("hook for `#{shell}` does not exist", 1)
+        error "hook for `#{shell}` does not exist", 1
       end
     end
   end

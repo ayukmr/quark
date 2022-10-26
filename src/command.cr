@@ -21,7 +21,7 @@ module Quark
         list_locations
 
       else
-        error("command `#{command}` does not exist")
+        error "command `#{command}` does not exist"
       end
     end
   end
