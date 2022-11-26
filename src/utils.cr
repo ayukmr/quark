@@ -18,7 +18,7 @@ end
 # raise error
 def error(message, exit_code = nil)
   puts "#{"error".red.bold}: #{message}"
-  exit exit_code unless exit_code.nil?
+  exit exit_code if exit_code
 end
 
 # convert home into tilde

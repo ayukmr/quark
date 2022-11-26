@@ -6,7 +6,7 @@ module Quark
       command = argv[0]?
 
       # help command
-      help if command == "help" || command.nil?
+      help if command == "help" || !command
 
       command, *args = argv
       Quark::Command.run(command, args)
