@@ -30,9 +30,9 @@ end
 def ensure_table(db)
   db.exec <<-SQL
     CREATE TABLE IF NOT EXISTS locations (
-      path STRING,
-      times INT DEFAULT 1,
-      last DATETIME DEFAULT CURRENT_TIMESTAMP
+      path  VARCHAR(255) NOT NULL,
+      times INT NOT NULL DEFAULT 1,
+      last  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP
     );
   SQL
 end
