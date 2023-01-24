@@ -20,6 +20,10 @@ module Quark
       when "list"
         list_locations
 
+      # clean locations
+      when "clean"
+        clean_locations
+
       else
         error "command `#{command}` does not exist"
       end
