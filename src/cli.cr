@@ -23,6 +23,7 @@ module Quark
         #{"hook".cyan} #{"<SHELL>".yellow}  get hook for shell
         #{"add".cyan}           add location to database
         #{"list".cyan}          list all locations
+        #{"clean".cyan}         clean locations in database
       HELP
 
       exit 0
