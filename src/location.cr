@@ -11,7 +11,7 @@ module Quark
       @path  = path
       @times = times
       @last  = Time.parse(last, "%F %T", Time::Location::UTC)
-      @score = Math.log(@times) * 1.5 - Math.log(Time.utc - @last)
+      @score = (Math.log(@times * 10) * 1.5 - (Math.log((Time.utc - @last) / 3600) / 2)).abs
     end
 
     # compare with other locations
