@@ -1,4 +1,4 @@
-<img src="media/logo.png" alt="Quark logo" width="125" align="right">
+<img src="media/logo.png" alt="quark logo" width="125" align="right">
 
 # `quark` - atomically jump around
 ### `quark` is a command-line tool for quickly jumping to directories.
