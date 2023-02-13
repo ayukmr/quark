@@ -1,6 +1,6 @@
 module Quark
   # cli for quark
-  class Cli
+  class CLI
     # run cli with argv
     def self.run(argv)
       command = argv[0]?

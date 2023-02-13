@@ -1,3 +1,3 @@
 require "./lib"
 
-Quark::Cli.run(ARGV)
+Quark::CLI.run(ARGV)
