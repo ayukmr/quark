@@ -22,7 +22,7 @@ module Quark
       locations.sort!
       locations.reverse!
 
-      path_length  = [locations.map { |location| tilde(location.path).size      }.max, 4].max
+      path_length  = [locations.map { |location| location.path.tilde.size       }.max, 4].max
       times_length = [locations.map { |location| location.times.to_s.size       }.max, 5].max
       last_length  = [locations.map { |location| location.last.to_s.size        }.max, 4].max
       score_length = [locations.map { |location| location.score.trunc.to_s.size }.max, 5].max
@@ -33,7 +33,7 @@ module Quark
       puts "├#{"─" * (path_length + 2)}┼#{"─" * (times_length + 2)}┼#{"─" * (last_length + 2)}┼#{"─" * (score_length + 2)}┤"
 
       locations.each do |location|
-        path  = tilde(location.path)
+        path  = location.path.tilde
         times = location.times.to_s
         last  = location.last.to_s
         score = location.score.trunc.to_s

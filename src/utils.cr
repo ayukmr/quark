@@ -13,17 +13,19 @@ class String
   def bold;      "\e[1m#{self}\e[22m" end
   def italic;    "\e[3m#{self}\e[23m" end
   def underline; "\e[4m#{self}\e[24m" end
+
+  # convert home into tilde
+  def tilde
+    sub(Regex.new(
+      "^#{Regex.escape(Path.home.to_s)}"
+    ), '~')
+  end
 end
 
 # raise error
 def error(message, exit_code = nil)
   puts "#{"error".red.bold}: #{message}"
   exit exit_code if exit_code
-end
-
-# convert home into tilde
-def tilde(path)
-  path.sub(Path.home.to_s, '~')
 end
 
 # ensure table exists
