@@ -22,9 +22,9 @@ module Quark
         if location
           # return location's path
           puts location.path
-        elsif Dir.exists?(File.expand_path(text, home: true))
+        elsif Dir.exists?(text)
           # return text if it is a valid path
-          puts File.expand_path(text, home: true)
+          puts text
         else
           # default to current directory
           puts Dir.current
