@@ -12,12 +12,12 @@ module Quark
             # remove location if invalid
             if !Dir.exists?(path)
               db.exec("DELETE FROM locations WHERE path = ?", path)
-              puts "#{"removing".red.bold} #{path}"
+              puts "#{"removing".red.bold} `#{path.tilde}`"
             end
           end
         end
 
-        puts "#{"cleaned locations".blue.bold}"
+        puts "#{"cleaned locations".magenta.bold}"
     end
   end
 end
