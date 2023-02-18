@@ -1,10 +1,10 @@
 module Quark
   # location from sql
   class Location
-    @path:  String
-    @times: Int32
-    @last:  Time
-    @score: Float64
+    @path  : String
+    @times : Int32
+    @last  : Time
+    @score : Float64
 
     # create location
     def initialize(path, times, last)
