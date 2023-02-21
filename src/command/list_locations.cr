@@ -6,14 +6,14 @@ module Quark
       ensure_table(db)
 
       locations = [] of Quark::Location
-      rs = db.query("SELECT * FROM locations")
+      rows = db.query("SELECT * FROM locations")
 
-      rs.each do
+      rows.each do
         location =
           Quark::Location.new(
-            rs.read(String),
-            rs.read(Int32),
-            rs.read(String)
+            rows.read(String),
+            rows.read(Int32),
+            rows.read(String)
           )
 
         locations.push(location)

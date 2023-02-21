@@ -2,15 +2,15 @@ module Quark
   # fuzzy searching
   class Fuzzy
     # fuzzy find locations
-    def self.fuzz_locations(input, rs)
+    def self.fuzz_locations(input, rows)
       locations = [] of Quark::Location
 
-      rs.each do
+      rows.each do
         location =
           Quark::Location.new(
-            rs.read(String),
-            rs.read(Int32),
-            rs.read(String)
+            rows.read(String),
+            rows.read(Int32),
+            rows.read(String)
           )
 
         # assemble regex
