@@ -22,9 +22,9 @@ module Quark
       locations.sort!
       locations.reverse!
 
-      path_length  = [locations.map { |location| location.path.tilde.size       }.max, 4].max
-      times_length = [locations.map { |location| location.times.to_s.size       }.max, 5].max
-      last_length  = [locations.map { |location| location.last.to_s.size        }.max, 4].max
+      path_length  = [locations.map { |location| location.path.tilde.size }.max, 4].max
+      times_length = [locations.map { |location| location.times.to_s.size }.max, 5].max
+      last_length  = [locations.map { |location| location.last.to_s("%m/%d %H:%M").size }.max, 4].max
       score_length = [locations.map { |location| location.score.trunc.to_s.size }.max, 5].max
 
       # draw header
@@ -35,7 +35,7 @@ module Quark
       locations.each do |location|
         path  = location.path.tilde
         times = location.times.to_s
-        last  = location.last.to_s
+        last  = location.last.to_s("%m/%d %H:%M")
         score = location.score.trunc.to_s
 
         # draw table cells
