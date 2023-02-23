@@ -24,6 +24,7 @@ module Quark
         #{"add".cyan}           add location to database
         #{"list".cyan}          list all locations
         #{"clean".cyan}         clean locations in database
+        #{"help".cyan}          show this message
       HELP
 
       exit 0
