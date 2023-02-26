@@ -16,11 +16,11 @@ module Quark
     def self.help
       puts <<-HELP
       #{"Usage".magenta.bold}:
-        #{"quark".cyan} #{"<COMMAND>".yellow}
+        #{"quark".cyan} #{"<command>".yellow}
 
       #{"Commands".magenta.bold}:
-        #{"run".cyan}  #{"<TEXT>".yellow}   fuzz locations for text
-        #{"hook".cyan} #{"<SHELL>".yellow}  get hook for shell
+        #{"run".cyan}  #{"<text>".yellow}   fuzz locations for text
+        #{"hook".cyan} #{"<shell>".yellow}  get hook for shell
         #{"add".cyan}           add location to database
         #{"list".cyan}          list all locations
         #{"clean".cyan}         clean locations in database
