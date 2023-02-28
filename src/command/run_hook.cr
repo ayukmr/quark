@@ -66,7 +66,7 @@ module Quark
         # print hook
         puts hook
       else
-        error "hook for `#{shell}` does not exist", 1
+        error "hook for `#{shell}` does not exist"
       end
     end
   end
