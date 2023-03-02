@@ -1,5 +1,5 @@
 module Quark
-  # cli for quark
+  # quark cli
   class CLI
     # run cli with argv
     def self.run(argv)
