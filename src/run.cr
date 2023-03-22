@@ -4,7 +4,7 @@ module Quark
     # get location using text
     def self.get_path(text)
       if text
-        db = DB.connect("sqlite3://#{File.expand_path("~/.quark.db", home: true)}")
+        db = db_connect
         ensure_table(db)
 
         location = Quark::Fuzzy.fuzz_locations(

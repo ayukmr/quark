@@ -4,7 +4,7 @@ module Quark
     def self.add_location
       return if Dir.current == Path.home
 
-      db = DB.connect("sqlite3://#{File.expand_path("~/.quark.db", home: true)}")
+      db = db_connect
       ensure_table(db)
 
       set = db.query("SELECT path FROM locations WHERE path = ?", Dir.current)

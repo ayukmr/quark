@@ -28,6 +28,11 @@ def error(message, exit = true)
   exit 1 if exit
 end
 
+# connect to db
+def db_connect
+  DB.connect("sqlite3://#{File.expand_path("~/.quark.db", home: true)}")
+end
+
 # ensure table exists
 def ensure_table(db)
   db.exec <<-SQL

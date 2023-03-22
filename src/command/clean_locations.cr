@@ -2,7 +2,7 @@ module Quark
   module Command
     # clean locations
     def self.clean_locations
-      db = DB.connect("sqlite3://#{File.expand_path("~/.quark.db", home: true)}")
+      db = db_connect
       ensure_table(db)
 
       db.query("SELECT * FROM locations") do |rows|

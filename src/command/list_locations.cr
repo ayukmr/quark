@@ -2,7 +2,7 @@ module Quark
   module Command
     # list locations
     def self.list_locations
-      db = DB.connect("sqlite3://#{File.expand_path("~/.quark.db", home: true)}")
+      db = db_connect
       ensure_table(db)
 
       locations = [] of Quark::Location
