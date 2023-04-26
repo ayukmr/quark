@@ -38,10 +38,10 @@ module Quark
     def self.help
       puts <<-HELP
       #{"Usage".magenta.bold}:
-        #{"q".cyan} #{"<TEXT>".yellow}
+        #{"q".blue} #{"<TEXT>".yellow}
 
       #{"Examples".magenta.bold}:
-        #{"q".cyan} #{"foo".yellow}  fuzz dirs for `foo`
+        #{"q".blue} #{"foo".yellow}  fuzz dirs for `foo`
       HELP
 
       exit 0
