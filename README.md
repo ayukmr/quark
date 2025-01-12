@@ -1,9 +1,11 @@
-<img src="media/logo.png" alt="quark logo" width="125" align="right">
+<img src="media/logo.png" width="125px">
 
-# `quark` - atomically jump around
-### `quark` is a command-line tool for quickly jumping to directories.
+# Quark
+
+Command-line tool for quickly jumping to directories.
 
 ## Getting Started
+
 Add one of the lines below to your shell's config file to get started with `quark`.
 
 ZSH:
@@ -24,6 +26,7 @@ quark hook fish | source
 **Make sure to restart your shell after adding the hook!**
 
 ## Usage
+
 After you have set up `quark`, use it using the `q` command:
 ```sh
 $ q text
@@ -32,6 +35,7 @@ $ q text
 With this command, `quark` will fuzz its database for a directory matching `text`.
 
 ## Notes
+
 `quark` operates by latching on to a `chpwd` hook or a `$PWD` change in your shell.
 This gives it the best experience over multiple shells.
 
